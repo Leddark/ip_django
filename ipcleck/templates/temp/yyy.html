@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+{% load static %}
+<html>
+<head>
+<link rel="icon" href="{% static 'img/fff.jpg' %}" type="image/jpg">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+<link rel="stylesheet" type="text/css" href="{% static 'default.css' %}" media="screen"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<title>ip and Host معرفة </title>
+</head>
+<body>
+<div class="container" style="height: 663px;">
+  <div class="gfx"><span></span></div>
+  <div class="top">
+
+
+
+<!-- القسم الاول-->
+    <div class="navigation">
+       <a href="/" id="selected">الصفحة الرئيسة</a> 
+      <a href="/">من نحن</a>
+       <a href="/">تواصل معنا</a> 
+      <a href="/">المدونة</a>
+       <a href="/">خدمات مجانية</a> 
+    </div>
+
+
+
+<!-- القسم الثاني-->
+    <div class="pattern"><span></span></div>
+    <div class="header">
+      <h1>موقع عربي</h1>
+      <p>حماية الخصوصية والامان لا احد يراقبك الموقع موثوق <i class="fas fa-check-square"></i> </p>
+    </div>
+    <div class="pattern"><span></span></div>
+  </div>
+
+
+<!-- القسم الثالث-->
+  <div class="content">
+
+<!-- Material input -->
+<br><br><br><br>
+
+      
+<form action="ip" method="POST">
+        
+  {% csrf_token %}
+  
+<div style="text-align:center; ">
+<input  style="font-size: 22px; width: 200px; height: 45px;" type="submit" value="ip "/>
+</div>
+<br>
+<h4 style="border:2px solid rgb(0, 0, 0); font-size: 25px;">{{Host_ip}}</h4>
+
+</form>
+
+<br>
+
+<form action="host" method="POST">
+        
+  {% csrf_token %}
+  
+<div style="text-align:center; ">
+<input  style="font-size: 22px; width: 200px; height: 45px;" type="submit" value="إسم المضيف "/>
+</div>
+<br>
+<h4 style="border:2px solid rgb(0, 0, 0); font-size: 25px;">سوف يظهر هنا...host</h4>
+
+</form>
+
+  </div>
+
+  
+  
+
+
+<!-- القسم الرابع-->
+<div class="footer" > &copy; 2020 <a href="https://www.facebook.com/abdullh.adrelaft" target="_blank"	>www.facebook.com</a>. جميع الحقوق محفوظة لصالح المهندس عبدالله مازن</div>
+</div>
+</body>
+</html>
